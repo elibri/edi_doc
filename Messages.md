@@ -1,0 +1,15 @@
+## Komunikaty
+
+
+### STOCK ENQUIRY
+
+### STOCK RESPONSE
+
+### ORDER
+
+### ORDER RESPONSE
+
+### DESPATCH ADVICE
+
+### INVOICE
+

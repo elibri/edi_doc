@@ -1,5 +1,7 @@
 ## Korzyści z wdrożenia EDI
 
-### Oszczędność czasu pieniędzy
+### Oszczędność czasu
 
-### Redukcja błędów i zwiększenie dokładności
+### Redukcja kosztów
+
+### Zwiększenie dokładności i eliminacja błędów

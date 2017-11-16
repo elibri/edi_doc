@@ -7,4 +7,4 @@ Raz wprowadzone dokumenty poddawane są konwersji i przekazywane systemowo do sy
 
 ### Zwiększenie dokładności i eliminacja błędów
 
-...
+Tu tekst o dokładności i eliminacji błędów.

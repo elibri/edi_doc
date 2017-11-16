@@ -36,6 +36,7 @@ Komunikat powinien być wklejony jako tekst w treści maila. Dopuszczalne jest t
 Przykład E-maila:
 
 ~~~
+
 Date: Tue, 14 Nov 2017 16:25:42 +0000
 From: edi <edi@publisher.com>
 To: edi@company.com

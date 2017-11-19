@@ -191,6 +191,48 @@ line_item.position:
 
 ### ORDER RESPONSE
 
+Jest to odpowiedż na zamówienie (nie można odpowiadać jednocześnie na kilka zamówień w jednym komunikacie *ORDER RESPONSE*). W odpowiedzi powinna znaleźć się informacja o pozycjach,
+które sprzedawca ma zamiar zrealizować (o części z góry wiadomo, że nie są dostępne). Jeśli sprzedawca odmawia realizacji zamówienia, to powinien wysłać komunikat tylko z nagłówkiem,
+bez żadnego produktu.
+
+~~~
+
+<?xml version="1.0" encoding="utf-8"?>
+<message>
+  <kind>ORDER_RESPONSE</kind>
+  <order_id>11</order_id>
+  <buyer_number>SK/18777/2017</buyer_number>
+  <buyer>SUPERSKLEP</buyer>
+  <seller>WYDAWNICTWO-DOBRE-KSIAZKI</seller>
+  <delivery>SUPERSKLEP-M1</delivery>
+  <line_items>
+    <line_item>
+      <quantity>1</quantity>
+      <ean>9788388722639</ean>
+      <buyer_code>SK101</buyer_code>
+      <description>Pamięć miłości</description>
+      <position>1</position>
+    </line_item>
+    <line_item>
+      <quantity>3</quantity>
+      <ean>9788388722684</ean>
+      <buyer_code>SK102</buyer_code>
+      <description>Dziedzictwo ziemi</description>
+      <position>2</position>
+    </line_item>
+  </line_items>
+</message>
+~~~
+
+Są tu powtórzone pola z komunikatu *ORDER*, z wyjątkiem:
+
+kind:
+  : rodzaj wiadomości, przyjmuje wartość **ORDER_RESPONSE**
+
+order_id:
+  : jest to numer zamówienia w systemie sprzedającego, *pole wymagane*
+
+
 ### DESPATCH ADVICE
 
 ### INVOICE

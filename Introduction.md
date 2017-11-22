@@ -1,13 +1,18 @@
 ## Dlaczego potrzebujemy nowego standardu
 
-### Po co wymyślać nowy standard, skoro już istnieje standard EDI
+### Po co wymyślać nowy standard, skoro już istnieje standard EDI?
 
-Jest kilka powodów, dla których chcemy zaproponować nowy stadard branżowy. Po pierwsze chcemy, żeby zaproponowany format był maksymalnie prosty. 
-Większość zamówień to jest realizowanych jednorazowo, czyli wysyłane są tylko dostępne produkty, a jeśli jakiś produkt staje się później znowu dostępny, 
-to zamawiający musi ponownie złożyć na niego zamówienie - zamówienie jest realizowane jednorazowo. Prosty format to mniejsze koszty programowania i prostsze testowanie.
+Jest kilka powodów, dla których proponujemy nowy stadard branżowy.  
+Po pierwsze, proponujemy format maksymalnie uproszczony. 
+Większość zamówień realizowanych jest jednorazowo, wysyłane są tylko dostępne produkty, niedostępne są ignorowane.
+Jeśli niedostępny produkt staje się dostępny w późniejszym terminie, zamawiający musi złożyć nowe zamówienie, które znowu, realizowane jest jednorazowo. 
 
-Po drugie nie nie ma tak naprawdę jednego standardu EDI, wystarczy porównać dokumentację firm Comarch (Comarchedi) i Infinite (Edinet). Dlaczego jednak nie wziąć jednego 
-z tych formatów? Otóż opisywane tam formaty są bardzo ogólne, ponieważ muszą być stosowalne dla różnych branż i produktów. Branża księgarska potrzebuje czegoś znacznie prostszego.
+#### Prosty format = niższe koszty programowania/testowania/wdrażania
+
+Po drugie, nie istnieje jednen standard EDI.  
+Wystarczy porównać dokumentację firm Comarch (Comarchedi) i Infinite (Edinet). Dlaczego jednak nie użyć jednego 
+z istniejących formatów? Otóż opisywane formaty mają postać bardzo ogólną. Wynika to z ich zastosowania w różnych branżach oraz konieczności obsługi zróżnocowanego asotrymentu i procedur. Branża księgarska potrzebuje czegoś znacznie prostszego.
+
 
 Nie chcemy przy tym proponować niczego, co miałoby zastąpić sprawdzoną i wdrożoną przez wiele firm wymianę dokumentów z sieciami handlowymi czy Empikiem - widzimy za to, że większość
 zamówień pomiędzy księgarniami, hurtowniami a wydawnictwami jest wysyłana w postaci różnego rodzaju plików excela lub wręcz ręcznie pisanami e-mailami - i tutaj chcielibyśmy

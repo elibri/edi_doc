@@ -10,8 +10,8 @@ Jest to żądanie otrzymania informacji o dostępnościach produktów wraz z cen
 <?xml version="1.0" encoding="utf-8"?>
 <message>
   <kind>STOCK_ENQUIRY</kind>
-  <buyer>SUPERSKLEP</buyer>
-  <seller>WYDAWNICTWO-DOBRE-KSIAZKI</seller>
+  <buyer>558710</buyer>
+  <seller>112871</seller>
 </message>
 ~~~
 
@@ -19,10 +19,10 @@ kind:
   : typ wiadomości, zawsze **STOCK_ENQUIRY**, *pole wymagane*
   
 buyer:
-  : kod strony zamawiającej, *pole wymagane*.
+  : kod strony zamawiającej w BookAddressDB, *pole wymagane*.
 
 seller:
-  : kod sprzedawcy, *pole wymagane*.
+  : kod sprzedawcy w BookAddressDB, *pole wymagane*.
 
 
 ### STOCK RESPONSE
@@ -34,8 +34,8 @@ Jest to odpowiedź na żądanie informacji o dostępnych do sprzedaży produktac
 <?xml version="1.0" encoding="utf-8"?>
 <message>
   <kind>STOCK_RESPONSE</kind>
-  <buyer>SUPERSKLEP</buyer>
-  <seller>WYDAWNICTWO-DOBRE-KSIAZKI</seller>
+  <buyer>558710</buyer>
+  <seller>112871</seller>
   <response_date>2017-11-19</response_date>
   <line_items>
     <line_item>
@@ -75,10 +75,10 @@ kind:
   : w tym komunikacie zawsze przyjmuje wartość **STOCK_RESPONSE**, *pole wymagane*
 
 buyer:
-  : kod strony zamawiającej, *pole wymagane*.
+  : kod strony zamawiającej w BookAddressDB, *pole wymagane*.
 
 seller:
-  : kod sprzedawcy, *pole wymagane*.
+  : kod sprzedawcy w BookAddressDB, *pole wymagane*.
 
 response_date:
   : data wygenerowania cennika, w formacie rrrr-mm-dd, *pole wymagane*
@@ -137,9 +137,9 @@ Jeśli zamawiane produkty staną się dostępne w późniejszym terminie, musz
 <message>
   <kind>ORDER</kind>
   <buyer_number>SK/18777/2017</buyer_number>
-  <buyer>SUPERSKLEP</buyer>
-  <seller>WYDAWNICTWO-DOBRE-KSIAZKI</seller>
-  <delivery>SUPERSKLEP-M1</delivery>
+  <buyer>558710</buyer>
+  <seller>112871</seller>
+  <delivery>558728</delivery>
   <order_date>2017-11-19</order_date>
   <line_items>
     <line_item>
@@ -165,13 +165,13 @@ buyer_number:
   : numer zamówienia w systemie zamawiającego, *pole wymagane*.
 
 buyer:
-  : kod zamawiającego, *pole wymagane*.
+  : kod zamawiającego w BookAddressDB, *pole wymagane*.
 
 seller:
-  : kod sprzedawcy, *pole wymagane*.
+  : kod sprzedawcy w BookAddressDB, *pole wymagane*.
 
 delivery:
-  : kod miejsca dostawy. W przypadku braku tego pola przyjmowana jest wartość z pola buyer
+  : kod miejsca dostawy w BookAddressDB. W przypadku braku tego pola przyjmowana jest wartość z pola buyer
 
 order_date:
   : data złożenia zamówienia, w formacie rrrr-mm-dd
@@ -207,9 +207,9 @@ bez żadnego produktu.
   <kind>ORDER_RESPONSE</kind>
   <seller_number>11/2017</seller_number>
   <buyer_number>SK/18777/2017</buyer_number>
-  <buyer>SUPERSKLEP</buyer>
-  <seller>WYDAWNICTWO-DOBRE-KSIAZKI</seller>
-  <delivery>SUPERSKLEP-M1</delivery>
+  <buyer>558710</buyer>
+  <seller>112871</seller>
+  <delivery>558728</delivery>
   <line_items>
     <line_item>
       <quantity>1</quantity>
@@ -274,9 +274,9 @@ Jest to informacja o wysyłce produktów.
   <kind>DESPATCH_ADVICE</kind>
   seller_number>11/2017</seller_number>
   <buyer_number>SK/18777/2017</buyer_number>
-  <buyer>SUPERSKLEP</buyer>
-  <seller>WYDAWNICTWO-DOBRE-KSIAZKI</seller>
-  <delivery>SUPERSKLEP-M1</delivery>
+  <buyer>558710</buyer>
+  <seller>112871</seller>
+  <delivery>558728</delivery>
   <line_items>
     <line_item>
       <quantity>3</quantity>
@@ -311,9 +311,9 @@ Jest to faktura wystawiona za towar. Do jednego zamówienia może zostać wystaw
   <invoice_number>29991/S/2017</invoice_number>
   <seller_number>11/2017</seller_number>
   <buyer_number>SK/18777/2017</buyer_number>
-  <buyer>SUPERSKLEP</buyer>
-  <seller>WYDAWNICTWO-DOBRE-KSIAZKI</seller>
-  <delivery>SUPERSKLEP-M1</delivery>
+  <buyer>558710</buyer>
+  <seller>112871</seller>
+  <delivery>558728</delivery>
   <invoice_date>2017-11-20</invoice_date>
   <sales_date>2017-11-20</sales_date>
   <payment_due_date>2017-12-03</payment_due_date>
@@ -374,13 +374,13 @@ seller_number:
   : jest to numer zamówienia w systemie sprzedającego, *pole wymagane*
 
 buyer:
-  : kod zamawiającego, *pole wymagane*.
+  : kod zamawiającego w BookAddressDB, *pole wymagane*.
 
 seller:
-  : kod sprzedawcy, *pole wymagane*.
+  : kod sprzedawcy w BookAddressDB, *pole wymagane*.
 
 delivery:
-  : kod miejsca dostawy. W przypadku braku tego pola przyjmowana jest wartość z pola buyer
+  : kod miejsca dostawy w BookAddressDB. W przypadku braku tego pola przyjmowana jest wartość z pola buyer
 
 invoice_date:
   : data wystawienia faktury, w formacie rrrr-mm-dd, *pole wymagane*
@@ -449,7 +449,7 @@ line_items:
           : EAN produktu, *pole wymagane*.
 
         buyer_code:
-          : kod zamawiającego, związany z linią zamówienia. Pozwala zamawiającemu łatwo śledzić zmiany związane z daną linią zamówienia, *pole wymagane*
+          : kod zamawiającego związany z linią zamówienia. Pozwala zamawiającemu łatwo śledzić zmiany związane z daną linią zamówienia, *pole wymagane*
 
         net_price:
           : cena sprzedaży jednostkowa netto, *pole wymagane*

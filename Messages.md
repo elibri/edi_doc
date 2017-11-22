@@ -64,7 +64,7 @@ Jest to odpowiedź na żądanie informacji o dostępnych do sprzedaży produktac
       <retail_price_including_tax>39.90</retail_price_including_tax>
       <tax>5</tax>
       <trading_prices>
-        <trade_price_excluding_tax>26.60</trade_price_excluding_tax>
+        <trade_net_price>25.20</trade_net_price>
       </trading_prices>
     </line_item>
   </line_items>
@@ -86,37 +86,44 @@ response_date:
 line_items:
   : zawiera zero lub więcej elementów `<line_item>`. Jeśli sprzedający nie współpracuje z kontrahentem, albo odmawia wygenerowania cennika, to powinien
     wygenerować pusty tag `<line_items/>`
+    
+    line_item: 
+      : linia zamówienia
 
-line_item.ean:
-  : EAN produktu, *pole wymagane*
+        ean:
+          : EAN produktu, *pole wymagane*
 
-line_item.description:
-  : nazwa produktu
+        description:
+          : nazwa produktu
 
-line_item.stock_quantity:
-  : przybliżona ilość dostępna od ręki do sprzedaży, *pole wymagane*
+        stock_quantity:
+          : przybliżona ilość dostępna od ręki do sprzedaży, *pole wymagane*
 
-line_item.expected_ship_date:
-  : data pierwszego dnia (w formacie rrrr-mm-dd), w którym będą realizowane zamówienia na ten produkt. W ten sposób można zasygnalizować, kiedy książka będzie dostępna do sprzedaży. 
-    Gdy jest podana ta data, to w polu `<stock_quantity>` proszę podawać 0.
+        expected_ship_date:
+          : data pierwszego dnia (w formacie rrrr-mm-dd), w którym będą realizowane zamówienia na ten produkt. 
+            W ten sposób można zasygnalizować, kiedy książka będzie dostępna do sprzedaży. 
+            Gdy jest podana ta data, to w polu `<stock_quantity>` proszę podawać 0.
 
-line_item.consumer_on_sale_date:
-  : w tym polu można podać datę, od kiedy książka może być sprzedawana klientom końcowym, w formacie rrrr-mm-dd.
+        consumer_on_sale_date:
+          : w tym polu można podać datę, od kiedy książka może być sprzedawana klientom końcowym, w formacie rrrr-mm-dd.
 
-line_item.retail_price_including_tax:
-  : w tym polu można podać cenę detaliczną produktu z podatkiem VAT.
+        retail_price_including_tax:
+          : w tym polu można podać cenę detaliczną produktu z podatkiem VAT.
 
-line_item.tax:
-  : stawka podatku VAT, w postaci liczby (bez znaku %)
+        tax:
+          : stawka podatku VAT, w postaci liczby (bez znaku %)
 
-line_item.trade_prices:
-  : informacja o cenach sprzedaży produktu dla kontrahenta określonego w tagu `<buyer>`. Cena może zostać powtórzona kilka razy z różną minimalną ilością zakupu produktu.
+        trade_prices:
+          : informacja o cenach sprzedaży produktu dla kontrahenta określonego w tagu `<buyer>`. Cena może zostać powtórzona kilka razy z różną minimalną ilością zakupu produktu.
 
-trade_prices.trade_price_excluding_tax:
-  : cena netto zakupu produktu
+            trade_price: 
+              : block informujący o cenie sprzedaży 
+            
+                trade_net_price:
+                  : cena netto zakupu produktu
 
-trade_prices.minimal_amount:
-  : minimalna ilość, którą trzeba zamówić. Brak tego taga oznacza, że minimalna ilość, którą trzeba zamówić to 1 szt./egz.
+                minimal_amount:
+                  : minimalna ilość, którą trzeba zamówić. Brak tego taga oznacza, że minimalna ilość, którą trzeba zamówić to 1 szt./egz.
 
 
 ### ORDER
@@ -140,14 +147,12 @@ Jeśli zamawiane produkty staną się dostępne w późniejszym terminie, musz
       <ean>9788388722639</ean>
       <buyer_code>SK101</buyer_code>
       <description>Pamięć miłości</description>
-      <position>1</position>
     </line_item>
     <line_item>
       <quantity>3</quantity>
       <ean>9788388722684</ean>
       <buyer_code>SK102</buyer_code>
       <description>Dziedzictwo ziemi</description>
-      <position>2</position>
     </line_item>
   </line_items>
 </message>
@@ -172,22 +177,22 @@ order_date:
   : data złożenia zamówienia, w formacie rrrr-mm-dd
 
 line_items:
-  : linie zamówienia. Każda linia jest zawarta w tagu `<line_item>`
+  : linie zamówienia.
+    
+    line_item:
+      : linia zamówienia
 
-line_item.quantity:
-  : ilość zamawianego produktu, *pole wymagane*.
+        quantity:
+          : ilość zamawianego produktu, *pole wymagane*.
 
-line_item.ean:
-  : EAN zamawianiego produktu, *pole wymagane*.
+        ean:
+          : EAN zamawianiego produktu, *pole wymagane*.
 
-line_item.buyer_code:
-  : kod zamawiającego
+        buyer_code:
+          : kod zamawiającego, związany z linią zamówienia. Pozwala zamawiającemu łatwo śledzić zmiany związane z daną linią zamówienia, *pole wymagane*
 
-line_item.description:
-  : nazwa towaru
-
-line_item.position: 
-  : numer linii, *pole wymagane*.
+        description:
+          : nazwa towaru
 
 ### ORDER RESPONSE
 
@@ -200,7 +205,7 @@ bez żadnego produktu.
 <?xml version="1.0" encoding="utf-8"?>
 <message>
   <kind>ORDER_RESPONSE</kind>
-  <order_id>11</order_id>
+  <seller_number>11/2017</seller_number>
   <buyer_number>SK/18777/2017</buyer_number>
   <buyer>SUPERSKLEP</buyer>
   <seller>WYDAWNICTWO-DOBRE-KSIAZKI</seller>
@@ -210,15 +215,21 @@ bez żadnego produktu.
       <quantity>1</quantity>
       <ean>9788388722639</ean>
       <buyer_code>SK101</buyer_code>
+      <net_price>19.93</net_price>
+      <net_amount>19.93</net_amount>
+      <tax_rate>5</tax_rate>
+      <tax_amount>1.00</tax_amount>
       <description>Pamięć miłości</description>
-      <position>1</position>
     </line_item>
     <line_item>
       <quantity>3</quantity>
       <ean>9788388722684</ean>
       <buyer_code>SK102</buyer_code>
+      <net_price>25.2</net_price>
+      <net_amount>75.6</net_amount>
+      <tax_rate>5</tax_rate>
+      <tax_amount>3.78</tax_amount>
       <description>Dziedzictwo ziemi</description>
-      <position>2</position>
     </line_item>
   </line_items>
 </message>
@@ -229,11 +240,263 @@ Są tu powtórzone pola z komunikatu *ORDER*, z wyjątkiem:
 kind:
   : rodzaj wiadomości, przyjmuje wartość **ORDER_RESPONSE**
 
-order_id:
+seller_number:
   : jest to numer zamówienia w systemie sprzedającego, *pole wymagane*
+
+line_items:
+  : line_item:
+      : Pola związane z ceną zakupu nie są obowiązkowe, ale bardzo polecamy podawanie tych wartości
+
+        quantity: 
+          : musi być większa od zera. Jeśli wybrana pozycja nie może być zrealizowana, powinna zostać usunięta z dokumentu.
+
+        net_price:
+          : cena sprzedaży jednostkowa netto.
+
+        net_amount:
+          : suma netto
+
+        tax_rate:
+          : stawka VAT
+
+        tax_amount:
+          : wartość VAT
 
 
 ### DESPATCH ADVICE
 
+Jest to informacja o wysyłce produktów.
+
+~~~
+
+<?xml version="1.0" encoding="utf-8"?>
+<message>
+  <kind>DESPATCH_ADVICE</kind>
+  seller_number>11/2017</seller_number>
+  <buyer_number>SK/18777/2017</buyer_number>
+  <buyer>SUPERSKLEP</buyer>
+  <seller>WYDAWNICTWO-DOBRE-KSIAZKI</seller>
+  <delivery>SUPERSKLEP-M1</delivery>
+  <line_items>
+    <line_item>
+      <quantity>3</quantity>
+      <ean>9788388722684</ean>
+      <buyer_code>SK102</buyer_code>
+      <net_price>25.2</net_price>
+      <net_amount>75.6</net_amount>
+      <tax_rate>5</tax_rate>
+      <tax_amount>3.78</tax_amount>
+      <description>Dziedzictwo ziemi</description>
+    </line_item>
+  </line_items>
+</message>
+
+~~~
+
+Są tu powtórzone pola z komunikatu *ORDER_RESPONSE*, z wyjątkiem:
+
+kind:
+  : rodzaj wiadomości, przyjmuje wartość **DESPATCH_ADVICE**
+
+
 ### INVOICE
 
+Jest to faktura wystawiona za towar. Do jednego zamówienia może zostać wystawiona jedna faktura.
+
+~~~
+
+<?xml version="1.0" encoding="utf-8"?>
+<message>
+  <kind>INVOICE</kind>
+  <invoice_number>29991/S/2017</invoice_number>
+  <seller_number>11/2017</seller_number>
+  <buyer_number>SK/18777/2017</buyer_number>
+  <buyer>SUPERSKLEP</buyer>
+  <seller>WYDAWNICTWO-DOBRE-KSIAZKI</seller>
+  <delivery>SUPERSKLEP-M1</delivery>
+  <invoice_date>2017-11-20</invoice_date>
+  <sales_date>2017-11-20</sales_date>
+  <payment_due_date>2017-12-03</payment_due_date>
+  <seller_name>Wydawnictwo Dobre książki z o. o.</seller_name>
+  <seller_address>ul Kolejowa 9/11</seller_address>
+  <seller_city>Warszawa</seller_city>
+  <seller_post_code>01-217</seller_post_code>
+  <seller_tax_id>9744287572</seller_tax_id>
+  <buyer_name>Księgarnia Superksiążki sp. z o. o.</buyer_name>
+  <buyer_address>Al. Niepodległości 1</buyer_address>
+  <buyer_city>Warszawa</buyer_city>
+  <buyer_post_code>02-653</buyer_post_code>
+  <buyer_tax_id>1270286596</buyer_tax_id>
+  <delivery_detail_name>Superksiążki - Magazyn</delivery_detail_name>
+  <delivery_detail_address>ul. Czarna 1</delivery_detail_address>
+  <delivery_detail_city>Warszawa</delivery_detail_city>
+  <delivery_detail_post_code>02-997</delivery_detail_post_code>
+  <pdf>--obraz faktury pdf zakodowany base64--</pdf>
+  <line_items>
+    <line_item>
+      <quantity>3</quantity>
+      <net_price>25.2</net_price>
+      <net_amount>75.6</net_amount>
+      <tax_rate>5</tax_rate>
+      <tax_amount>3.78</tax_amount>
+      <ean>9788388722684</ean>
+      <buyer_code>SK102</buyer_code>
+      <description>Dziedzictwo ziemi</description>
+    </line_item>
+  </line_items>
+  <summary>
+    <total_lines>1</total_lines>
+    <net_amount>75.6</net_amount>
+    <tax_amount>3.78</tax_amount>
+    <gross_amount>79.38</gross_amount>
+    <tax_rate_summaries>
+      <tax_rate_summary>
+        <tax_rate>5</tax_rate>
+        <net_amount>75.6</net_amount>
+        <tax_amount>3.78</tax_amount>
+        <gross_amount>79.38</gross_amount>
+      </tax_rate_summary>
+    </tax_rate_summaries>
+  </summary>
+</message>
+~~~
+
+kind:
+  : typ wiadomości, zawsze **INVOICE**, *pole wymagane*
+
+invoice_number:
+  : numer wystawionej faktury, *pole wymagane*
+
+buyer_number:
+  : numer zamówienia w systemie zamawiającego, *pole wymagane*.
+
+seller_number:
+  : jest to numer zamówienia w systemie sprzedającego, *pole wymagane*
+
+buyer:
+  : kod zamawiającego, *pole wymagane*.
+
+seller:
+  : kod sprzedawcy, *pole wymagane*.
+
+delivery:
+  : kod miejsca dostawy. W przypadku braku tego pola przyjmowana jest wartość z pola buyer
+
+invoice_date:
+  : data wystawienia faktury, w formacie rrrr-mm-dd, *pole wymagane*
+
+sales_date:
+  : data sprzedaży, w formacie rrrr-mm-dd, *pole wymagane*
+
+payment_due_date:
+  : termin płatności, w formacie rrrr-mm-dd, *pole wymagane*
+
+seller_name:
+  : nazwa sprzedawcy, *pole wymagane*
+
+seller_address:
+  : adres sprzedającego - ulica, *pole wymagane*
+
+seller_city:
+  : adres sprzedającego - miasto, *pole wymagane*
+
+seller_post_code:
+  : adres sprzedającego - kod pocztowy, *pole wymagane*
+
+seller_tax_id:
+  : NIP sprzedającego, *pole wymagane*
+
+buyer_name:
+  : nazwa kupującego, *pole wymagane*
+
+buyer_address:
+  : adres kupującego - ulica, *pole wymagane*
+
+buyer_city:
+  : adres kupującego - miasto, *pole wymagane*
+
+buyer_post_code:
+  : adres kupującego, - kod pocztowy, *pole wymagane*
+
+buyer_tax_id:
+  : NIP kupującego, *pole wymagane*
+
+delivery_detail_name:
+  : nazwa miejsca dostarczenia towaru, *pole wymagane jeśli obecna jest wartość delivery*
+
+delivery_detail_address:
+  : adres dostarczenia towaru - ulica, *pole wymagane jeśli obecna jest wartość delivery*
+
+delivery_detail_city:
+  : adres dostarczenia towaru - miasto, *pole wymagane jeśli obecna jest wartość delivery*
+
+delivery_detail_post_code:
+  : adres dostarczenia towaru - kod pocztowy, *pole wymagane jeśli obecna jest wartość delivery*
+
+pdf:
+  : obraz faktury pdf zakodowany w base64
+
+line_items:
+  : linie fakturty
+    
+    line_item:
+      : linia faktury
+
+        quantity:
+          : ilość produktu, *pole wymagane*.
+
+        ean:
+          : EAN produktu, *pole wymagane*.
+
+        buyer_code:
+          : kod zamawiającego, związany z linią zamówienia. Pozwala zamawiającemu łatwo śledzić zmiany związane z daną linią zamówienia, *pole wymagane*
+
+        net_price:
+          : cena sprzedaży jednostkowa netto, *pole wymagane*
+
+        net_amount:
+          : suma netto, *pole wymagane*
+
+        tax_rate:
+          : stawka VAT, *pole wymagane*
+
+        tax_amount:
+          : wartość VAT, *pole wymagane*
+
+        description:
+          : nazwa towaru
+
+summary:
+  : podsumowanie dokumentu
+
+    total_lines:
+      : liczba pozycji na fakturze, *pole wymagane*
+    
+    net_amount:
+      : wartość netto faktury, *pole wymagane*
+    
+    tax_amount:
+      : wartość VAT, *pole wymagane*
+    
+    gross_amount:
+      : wartość brutto faktury, *pole wymagane*
+    
+    tax_rate_summaries:
+      : podsumowanie faktury pogrupowane według stawek VAT, *pole wymagane*
+
+        tax_rate_summary:
+          : podsumowanie dla jednej stawki podatku VAT. Musi wystąpić przynajmniej raz.
+        
+            tax_rate:
+              : stawka VAT, *pole wymagane*
+            
+            net_amount:
+              : wartość netto, *pole wymagane*
+             
+            tax_amount:
+              : wartość VAT, *pole wymagane*
+             
+            gross_amount:
+              : wartość brutto dla określonej w polu tax_rate stawki VAT, *pole wymagane*
+
+  

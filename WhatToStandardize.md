@@ -29,11 +29,11 @@ ORDER
 
 ORDER RESPONSE 
   : (komunikat nieobowiązkowy) - potwierdzenie przyjęcia zamówienia przez sprzedawcę. Na tym etapie sprzedawca może określić, 
-  : które produkty zostały skreślone z zamówienia (np. niedostępne w magazynie).
+    które produkty zostały skreślone z zamówienia (np. niedostępne w magazynie).
 
 DESPATCH ADVICE 
-  : (komunikat nieobowiązkowy) - informacja o wysyłce wraz ze szczegółową informacją o stopniu realizacji zamówienia (
-  : w stosunku do poprzedniego komunikatu mogły nastąpić zmiany - na przykład wybrany tytuł nie został znaleziony w magazynie lub wszystkie egzemplarze są uszkodzone). 
+  : (komunikat nieobowiązkowy) - informacja o wysyłce wraz ze szczegółową informacją o stopniu realizacji zamówienia (w stosunku do poprzedniego 
+    komunikatu mogły nastąpić zmiany - na przykład wybrany tytuł nie został znaleziony w magazynie lub wszystkie egzemplarze są uszkodzone). 
 
 INVOICE
   : informacja o wystawionej fakturze do zrealizowanego zamówienia.

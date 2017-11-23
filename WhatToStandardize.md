@@ -1,18 +1,5 @@
 ## Co chcemy ustandaryzować?
 
-### Sposób identyfikacji partnerów. 
-
-Istnieje potrzeba, żeby w komunikatach EDI jednoznacznie identyfikować partnerów transakcji (sprzedawca/odbiorca/miejsce dostawy). 
-Numer NIP jest niewystarczający, ponieważ dla magazynów nie ma oddzielnego numeru. Powstaje więc potrzeba stworzenia bazy adresowej BookAddressDB, która będzie zawierała:
-
-- dane kontrahenta dla każdego identyfikatora
-- będzie pozwalała zainteresowanym podmiotom zapisać mapowanie na wewnętrzne identyfikatory używane w aplikacji sprzedażowej.
-
-Na przykład wydawnictwo Dobre Książki ma identyfikator 112871 w BookAddressDB. Księgarnia Supersklep i jej magazyn mają identyfikatory 558710 i 558728. Pracownicy działu handlowego
-mogą wprowadzić do BookAddressDB mapowanie identyfikatorów 558710 i 558728 na 114 i 116. 
-Mapowanie można automatycznie pobierać z BookAddressDB i w ten sposób automatyzować przetwarzanie zamówień. Oczywiście jest to potrzebne tylko tym sprzedawcom i dostawcom, którzy nie mogą 
-zrobić tego bezpośrednio w swoim oprogramowaniu.
-
 ### Komunikaty
 
 Elektroniczna wymiana dokumentów opiera się o komunikaty. Na początek chcielibyśmy ustandaryzować sześć z nich:

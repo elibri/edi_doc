@@ -19,10 +19,10 @@ kind:
   : typ wiadomości, zawsze **STOCK_ENQUIRY**, *pole wymagane*
 
 buyer:
-  : kod strony zamawiającej w BookAddressDB, *pole wymagane*.
+  : identyfikator strony zamawiającej, *pole wymagane*.
 
 seller:
-  : kod sprzedawcy w BookAddressDB, *pole wymagane*.
+  : identyfikator sprzedawcy, *pole wymagane*.
 
 
 ### STOCK RESPONSE
@@ -75,10 +75,10 @@ kind:
   : w tym komunikacie zawsze przyjmuje wartość **STOCK_RESPONSE**, *pole wymagane*
 
 buyer:
-  : kod strony zamawiającej w BookAddressDB, *pole wymagane*.
+  : identyfikator strony zamawiającej, *pole wymagane*.
 
 seller:
-  : kod sprzedawcy w BookAddressDB, *pole wymagane*.
+  : identyfikator sprzedawcy, *pole wymagane*.
 
 response_date:
   : data wygenerowania cennika, w formacie rrrr-mm-dd, *pole wymagane*
@@ -163,13 +163,13 @@ buyer_number:
   : numer zamówienia w systemie zamawiającego, *pole wymagane*.
 
 buyer:
-  : kod zamawiającego w BookAddressDB, *pole wymagane*.
+  : identyfikator zamawiającego, *pole wymagane*.
 
 seller:
-  : kod sprzedawcy w BookAddressDB, *pole wymagane*.
+  : identyfikator sprzedawcy, *pole wymagane*.
 
 delivery:
-  : kod miejsca dostawy w BookAddressDB. W przypadku braku tego pola przyjmowana jest wartość z pola buyer
+  : identyfikator miejsca dostawy. W przypadku braku tego pola przyjmowana jest wartość z pola buyer
 
 order_date:
   : data złożenia zamówienia, w formacie rrrr-mm-dd
@@ -365,13 +365,13 @@ seller_number:
   : jest to numer zamówienia w systemie sprzedającego, *pole wymagane*
 
 buyer:
-  : kod zamawiającego w BookAddressDB, *pole wymagane*.
+  : identyfikator zamawiającego, *pole wymagane*.
 
 seller:
-  : kod sprzedawcy w BookAddressDB, *pole wymagane*.
+  : identyfikator sprzedawcy, *pole wymagane*.
 
 delivery:
-  : kod miejsca dostawy w BookAddressDB. W przypadku braku tego pola przyjmowana jest wartość z pola buyer
+  : identyfikator miejsca dostawy. W przypadku braku tego pola przyjmowana jest wartość z pola buyer
 
 invoice_date:
   : data wystawienia faktury, w formacie rrrr-mm-dd, *pole wymagane*

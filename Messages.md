@@ -46,11 +46,11 @@ Jest to odpowiedź na żądanie informacji o dostępnych do sprzedaży produktac
       <tax>5</tax>
       <trading_prices>
         <trade_price>
-          <trade_price_excluding_tax>19.93</trade_price_excluding_tax>
+          <trade_net_price>19.93</trade_net_price>
           <minimal_amount>1</minimal_amount>
         </trade_price>
         <trade_price>
-          <trade_price_excluding_tax>17.09</trade_price_excluding_tax>
+          <trade_net_price>17.09</trade_net_price>
           <minimal_amount>10</minimal_amount>
         </trade_price>
       </trading_prices>

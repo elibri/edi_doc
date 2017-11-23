@@ -66,9 +66,3 @@ Content-Transfer-Encoding: 7bit
 Tu znajduje się ignorowany przy przetwarzaniu komunikat
 ~~~
 
-Jeśli odbieranie E-maila było technicznym problemem, to proponujemy skorzystanie np. z serwisu [mailgun](https://www.mailgun.com/inbound-routing) 
-do obsługi przychodzących E-maili: mailgun parsuje E-maila i łączy się ze zdefiniowanym przez nas URL wysyłając sparsowanego E-maila jako request body.
-W tym celu trzeba przekazać mailgun-owi zarządzanie jakąś domeną. Proponujemy stworzenie jakieś subdomeny i oddelegowanie jej do mailgun-a, albo kupienie nowej
-domeny najwyższego rzędu, tylko w tym celu.
-
-

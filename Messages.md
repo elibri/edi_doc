@@ -145,13 +145,11 @@ Jeśli zamawiane produkty staną się dostępne w późniejszym terminie, musz
     <line_item>
       <quantity>2</quantity>
       <ean>9788388722639</ean>
-      <buyer_code>SK101</buyer_code>
       <description>Pamięć miłości</description>
     </line_item>
     <line_item>
       <quantity>3</quantity>
       <ean>9788388722684</ean>
-      <buyer_code>SK102</buyer_code>
       <description>Dziedzictwo ziemi</description>
     </line_item>
   </line_items>
@@ -188,9 +186,6 @@ line_items:
         ean:
           : EAN zamawianiego produktu, *pole wymagane*.
 
-        buyer_code:
-          : kod zamawiającego, związany z linią zamówienia. Pozwala zamawiającemu łatwo śledzić zmiany związane z daną linią zamówienia, *pole wymagane*
-
         description:
           : nazwa towaru
 
@@ -214,7 +209,6 @@ bez żadnego produktu.
     <line_item>
       <quantity>1</quantity>
       <ean>9788388722639</ean>
-      <buyer_code>SK101</buyer_code>
       <net_price>19.93</net_price>
       <net_amount>19.93</net_amount>
       <tax_rate>5</tax_rate>
@@ -224,7 +218,6 @@ bez żadnego produktu.
     <line_item>
       <quantity>3</quantity>
       <ean>9788388722684</ean>
-      <buyer_code>SK102</buyer_code>
       <net_price>25.2</net_price>
       <net_amount>75.6</net_amount>
       <tax_rate>5</tax_rate>
@@ -281,7 +274,6 @@ Jest to informacja o wysyłce produktów.
     <line_item>
       <quantity>3</quantity>
       <ean>9788388722684</ean>
-      <buyer_code>SK102</buyer_code>
       <net_price>25.2</net_price>
       <net_amount>75.6</net_amount>
       <tax_rate>5</tax_rate>
@@ -340,7 +332,6 @@ Jest to faktura wystawiona za towar. Do jednego zamówienia może zostać wystaw
       <tax_rate>5</tax_rate>
       <tax_amount>3.78</tax_amount>
       <ean>9788388722684</ean>
-      <buyer_code>SK102</buyer_code>
       <description>Dziedzictwo ziemi</description>
     </line_item>
   </line_items>
@@ -447,9 +438,6 @@ line_items:
 
         ean:
           : EAN produktu, *pole wymagane*.
-
-        buyer_code:
-          : kod zamawiającego związany z linią zamówienia. Pozwala zamawiającemu łatwo śledzić zmiany związane z daną linią zamówienia, *pole wymagane*
 
         net_price:
           : cena sprzedaży jednostkowa netto, *pole wymagane*

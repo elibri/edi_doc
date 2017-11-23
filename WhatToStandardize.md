@@ -10,7 +10,7 @@ Numer NIP jest niewystarczający, ponieważ dla magazynów nie ma oddzielnego nu
 
 Na przykład wydawnictwo Dobre Książki ma identyfikator 112871 w BookAddressDB. Księgarnia Supersklep i jej magazyn mają identyfikatory 558710 i 558728. Pracownicy działu handlowego
 mogą wprowadzić do BookAddressDB mapowanie identyfikatorów 558710 i 558728 na 114 i 116. 
-To mapowanie można automatycznie pobierać z BookAddressDB i w ten sposób automatyzować przetwarzanie zamówień. To oczywiście jest potrzebne tylko sprzedawcom, którzy nie mogą 
+Mapowanie można automatycznie pobierać z BookAddressDB i w ten sposób automatyzować przetwarzanie zamówień. Oczywiście jest to potrzebne tylko tym sprzedawcom i dostawcom, którzy nie mogą 
 zrobić tego bezpośrednio w swoim oprogramowaniu.
 
 ### Komunikaty
@@ -41,7 +41,7 @@ INVOICE
 
 ### Droga wymiany komunikatów
 
-Najbardziej uniwersalnym sposobem wymiany komunikatów jest E-mail. Każda firma musi dwa adresy E-mail: jeden, na który mają być wysyłane komunikaty, drugi, na który będą odsyłane
+Najbardziej uniwersalnym sposobem wymiany komunikatów jest E-mail. Każda firma musi mieć dwa adresy E-mail: jeden, na który mają być wysyłane komunikaty, drugi, na który będą odsyłane
 informacje o błędach podczas przetwarzania komunikatów (ta skrzynka powinna być regularnie czytana przez wyznaczonego pracownika). 
 
 Komunikat powinien być wklejony jako tekst w treści maila. Dopuszczalne jest też umieszczenie stopki, po linii skłającej się z przynajmniej dwóch myślników.

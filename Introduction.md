@@ -12,12 +12,11 @@ Jeśli niedostępny produkt staje się dostępny w późniejszym terminie, zamaw
 
 Po drugie - nie istnieje jednen standard EDI.  
 Wystarczy porównać dokumentację firm Comarch (Comarchedi) i Infinite (Edinet). 
-Dlaczego jednak nie użyć jednego z istniejących formatów? Otóż opisywane wersje mają postać bardzo ogólną. Wynika to z ich stosowania w różnych branżach oraz konieczności obsługi zróżnocowanego asotrymentu i procedur. Branża księgarska potrzebuje czegoś znacznie prostszego.
+Dlaczego jednak nie użyć jednego z istniejących formatów? Otóż opisywane wersje mają postać bardzo ogólną. Wynika to z ich stosowania w różnych branżach oraz konieczności obsługi zróżnicowanego asotrymentu i procedur. Branża księgarska potrzebuje czegoś znacznie prostszego.
 
 #### Nie chcemy zastępować istniejących formatów
 
 Naszym celem nie jest zastępowanie formatów wymiany danych, wypracowanych z sieciami handlowymi.
-Dostrzegamy jednak potrzebę usprawnienia procesu przekazywania zamówień tam, gdzie żadne formaty nie obowiązują. Zdecydowana większość zamówień, krążąca pomiędzy księgarniami, hurtowniami i wydawnictwami ma nadal zróżnocowaną postać plików excel, word, czy poprostu plików tekstowych. Celem projektu jest eliminacja i uporządkowanie, właśnie tej części dokumentów, przu założeniu maksymalnego uproszczenia.
-
+Dostrzegamy jednak potrzebę usprawnienia procesu przekazywania zamówień tam, gdzie żadne formaty nie obowiązują. Zdecydowana większość zamówień, krążąca pomiędzy księgarniami, hurtowniami i wydawnictwami ma nadal zróżnicowaną postać plików excel, word, czy poprostu plików tekstowych. Celem projektu jest eliminacja i uporządkowanie, właśnie tej części dokumentów, przu założeniu maksymalnego uproszczenia.
 
 

@@ -17,7 +17,7 @@ Jest to żądanie otrzymania informacji o dostępnościach produktów wraz z cen
 
 kind:
   : typ wiadomości, zawsze **STOCK_ENQUIRY**, *pole wymagane*
-  
+
 buyer:
   : kod strony zamawiającej w BookAddressDB, *pole wymagane*.
 
@@ -28,7 +28,7 @@ seller:
 ### STOCK RESPONSE
 
 Jest to odpowiedź na żądanie informacji o dostępnych do sprzedaży produktach i ich cenach (opcjonalnie)
- 
+
 ~~~
 
 <?xml version="1.0" encoding="utf-8"?>
@@ -86,7 +86,7 @@ response_date:
 line_items:
   : zawiera zero lub więcej elementów `<line_item>`. Jeśli sprzedający nie współpracuje z kontrahentem, albo odmawia wygenerowania cennika, to powinien
     wygenerować pusty tag `<line_items/>`
-    
+
     line_item: 
       : linia zamówienia
 
@@ -118,7 +118,7 @@ line_items:
 
             trade_price: 
               : block informujący o cenie sprzedaży 
-            
+
                 trade_net_price:
                   : cena netto zakupu produktu
 
@@ -178,7 +178,7 @@ order_date:
 
 line_items:
   : linie zamówienia.
-    
+
     line_item:
       : linia zamówienia
 
@@ -272,7 +272,7 @@ Jest to informacja o wysyłce produktów.
 <?xml version="1.0" encoding="utf-8"?>
 <message>
   <kind>DESPATCH_ADVICE</kind>
-  seller_number>11/2017</seller_number>
+  <seller_number>11/2017</seller_number>
   <buyer_number>SK/18777/2017</buyer_number>
   <buyer>558710</buyer>
   <seller>112871</seller>
@@ -438,7 +438,7 @@ pdf:
 
 line_items:
   : linie fakturty
-    
+
     line_item:
       : linia faktury
 
@@ -471,32 +471,32 @@ summary:
 
     total_lines:
       : liczba pozycji na fakturze, *pole wymagane*
-    
+
     net_amount:
       : wartość netto faktury, *pole wymagane*
-    
+
     tax_amount:
       : wartość VAT, *pole wymagane*
-    
+
     gross_amount:
       : wartość brutto faktury, *pole wymagane*
-    
+
     tax_rate_summaries:
       : podsumowanie faktury pogrupowane według stawek VAT, *pole wymagane*
 
         tax_rate_summary:
           : podsumowanie dla jednej stawki podatku VAT. Musi wystąpić przynajmniej raz.
-        
+
             tax_rate:
               : stawka VAT, *pole wymagane*
-            
+
             net_amount:
               : wartość netto, *pole wymagane*
-             
+
             tax_amount:
               : wartość VAT, *pole wymagane*
-             
+
             gross_amount:
               : wartość brutto dla określonej w polu tax_rate stawki VAT, *pole wymagane*
 
-  
+

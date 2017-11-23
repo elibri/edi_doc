@@ -136,7 +136,7 @@ Jeśli zamawiane produkty staną się dostępne w późniejszym terminie, musz
 <?xml version="1.0" encoding="utf-8"?>
 <message>
   <kind>ORDER</kind>
-  <buyer_number>SK/18777/2017</buyer_number>
+  <buyer_order_number>SK/18777/2017</buyer_order_number>
   <buyer>558710</buyer>
   <seller>112871</seller>
   <delivery>558728</delivery>
@@ -159,7 +159,7 @@ Jeśli zamawiane produkty staną się dostępne w późniejszym terminie, musz
 kind:
   : w komunikacie zamówienia zawsze przyjmuje wartość **ORDER**, *pole wymagane*
 
-buyer_number:
+buyer_order_number:
   : numer zamówienia w systemie zamawiającego, *pole wymagane*.
 
 buyer:
@@ -200,8 +200,8 @@ bez żadnego produktu.
 <?xml version="1.0" encoding="utf-8"?>
 <message>
   <kind>ORDER_RESPONSE</kind>
-  <seller_number>11/2017</seller_number>
-  <buyer_number>SK/18777/2017</buyer_number>
+  <seller_order_number>11/2017</seller_order_number>
+  <buyer_order_number>SK/18777/2017</buyer_order_number>
   <buyer>558710</buyer>
   <seller>112871</seller>
   <delivery>558728</delivery>
@@ -233,7 +233,10 @@ Są tu powtórzone pola z komunikatu *ORDER*, z wyjątkiem:
 kind:
   : rodzaj wiadomości, przyjmuje wartość **ORDER_RESPONSE**
 
-seller_number:
+order_buyer_number:
+  : identyfikator wiążący ten dokument z oryginalnym zamówieniem, *pole wymagane*
+
+seller_order_number:
   : jest to numer zamówienia w systemie sprzedającego, *pole wymagane*
 
 line_items:
@@ -265,8 +268,8 @@ Jest to informacja o wysyłce produktów.
 <?xml version="1.0" encoding="utf-8"?>
 <message>
   <kind>DESPATCH_ADVICE</kind>
-  <seller_number>11/2017</seller_number>
-  <buyer_number>SK/18777/2017</buyer_number>
+  <seller_order_number>11/2017</seller_order_number>
+  <buyer_order_number>SK/18777/2017</buyer_order_number>
   <buyer>558710</buyer>
   <seller>112871</seller>
   <delivery>558728</delivery>
@@ -301,8 +304,8 @@ Jest to faktura wystawiona za towar. Do jednego zamówienia może zostać wystaw
 <message>
   <kind>INVOICE</kind>
   <invoice_number>29991/S/2017</invoice_number>
-  <seller_number>11/2017</seller_number>
-  <buyer_number>SK/18777/2017</buyer_number>
+  <seller_order_number>11/2017</seller_order_number>
+  <buyer_order_number>SK/18777/2017</buyer_order_number>
   <buyer>558710</buyer>
   <seller>112871</seller>
   <delivery>558728</delivery>
@@ -358,10 +361,10 @@ kind:
 invoice_number:
   : numer wystawionej faktury, *pole wymagane*
 
-buyer_number:
-  : numer zamówienia w systemie zamawiającego, *pole wymagane*.
+buyer_order_number:
+  : numer zamówienia w systemie zamawiającego, wiąże fakturę z oryginalnym zamówieniem, *pole wymagane*.
 
-seller_number:
+seller_order_number:
   : jest to numer zamówienia w systemie sprzedającego, *pole wymagane*
 
 buyer:

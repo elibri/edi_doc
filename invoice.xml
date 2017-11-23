@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<message>
+  <kind>INVOICE</kind>
+  <invoice_number>29991/S/2017</invoice_number>
+  <seller_order_number>11/2017</seller_order_number>
+  <buyer_order_number>SK/18777/2017</buyer_order_number>
+  <buyer>558710</buyer>
+  <seller>112871</seller>
+  <delivery>558728</delivery>
+  <invoice_date>2017-11-20</invoice_date>
+  <sales_date>2017-11-20</sales_date>
+  <payment_due_date>2017-12-03</payment_due_date>
+  <seller_name>Wydawnictwo Dobre książki z o. o.</seller_name>
+  <seller_address>ul Kolejowa 9/11</seller_address>
+  <seller_city>Warszawa</seller_city>
+  <seller_post_code>01-217</seller_post_code>
+  <seller_tax_id>9744287572</seller_tax_id>
+  <buyer_name>Księgarnia Superksiążki sp. z o. o.</buyer_name>
+  <buyer_address>Al. Niepodległości 1</buyer_address>
+  <buyer_city>Warszawa</buyer_city>
+  <buyer_post_code>02-653</buyer_post_code>
+  <buyer_tax_id>1270286596</buyer_tax_id>
+  <delivery_detail_name>Superksiążki - Magazyn</delivery_detail_name>
+  <delivery_detail_address>ul. Czarna 1</delivery_detail_address>
+  <delivery_detail_city>Warszawa</delivery_detail_city>
+  <delivery_detail_post_code>02-997</delivery_detail_post_code>
+  <pdf>--obraz faktury pdf zakodowany base64--</pdf>
+  <line_items>
+    <line_item>
+      <quantity>3</quantity>
+      <net_price>25.2</net_price>
+      <net_amount>75.6</net_amount>
+      <tax_rate>5</tax_rate>
+      <tax_amount>3.78</tax_amount>
+      <ean>9788388722684</ean>
+      <description>Dziedzictwo ziemi</description>
+    </line_item>
+  </line_items>
+  <summary>
+    <total_lines>1</total_lines>
+    <net_amount>75.6</net_amount>
+    <tax_amount>3.78</tax_amount>
+    <gross_amount>79.38</gross_amount>
+    <tax_rate_summaries>
+      <tax_rate_summary>
+        <tax_rate>5</tax_rate>
+        <net_amount>75.6</net_amount>
+        <tax_amount>3.78</tax_amount>
+        <gross_amount>79.38</gross_amount>
+      </tax_rate_summary>
+    </tax_rate_summaries>
+  </summary>
+</message>
+

@@ -5,15 +5,7 @@
 
 Jest to żądanie otrzymania informacji o dostępnościach produktów wraz z cenami.
 
-~~~
-
-<?xml version="1.0" encoding="utf-8"?>
-<message>
-  <kind>STOCK_ENQUIRY</kind>
-  <buyer>558710</buyer>
-  <seller>112871</seller>
-</message>
-~~~
+<include filename="stock_enquiry.xml"/>
 
 kind:
   : typ wiadomości, zawsze **STOCK_ENQUIRY**, *pole wymagane*
@@ -29,47 +21,7 @@ seller:
 
 Jest to odpowiedź na żądanie informacji o dostępnych do sprzedaży produktach i ich cenach (opcjonalnie)
 
-~~~
-
-<?xml version="1.0" encoding="utf-8"?>
-<message>
-  <kind>STOCK_RESPONSE</kind>
-  <buyer>558710</buyer>
-  <seller>112871</seller>
-  <response_date>2017-11-19</response_date>
-  <line_items>
-    <line_item>
-      <ean>9788388722639</ean>
-      <description>Pamięć miłości</description>
-      <stock_quantity>12</stock_quantity>
-      <retail_price_including_tax>29.90</retail_price_including_tax>
-      <tax>5</tax>
-      <trading_prices>
-        <trade_price>
-          <trade_net_price>19.93</trade_net_price>
-          <minimal_amount>1</minimal_amount>
-        </trade_price>
-        <trade_price>
-          <trade_net_price>17.09</trade_net_price>
-          <minimal_amount>10</minimal_amount>
-        </trade_price>
-      </trading_prices>
-    </line_item>
-    <line_item>
-      <ean>9788388722684</ean>
-      <description>Dziedzictwo ziemi</description>
-      <stock_quantity>50</stock_quantity>
-      <expected_ship_date>2017-12-01</expected_ship_date>
-      <consumer_on_sale_date>2017-12-05</consumer_on_sale_date>
-      <retail_price_including_tax>39.90</retail_price_including_tax>
-      <tax>5</tax>
-      <trading_prices>
-        <trade_net_price>25.20</trade_net_price>
-      </trading_prices>
-    </line_item>
-  </line_items>
-</message>
-~~~
+<include filename="stock_response.xml"/>
 
 kind:
   : w tym komunikacie zawsze przyjmuje wartość **STOCK_RESPONSE**, *pole wymagane*
@@ -131,30 +83,7 @@ line_items:
 Zamówienie na produkty. Zamówienie jest realizowane tylko raz, to znaczy, że produkty niedostępne w momencie realizacji zamówienia nie będą później dosyłane. 
 Jeśli zamawiane produkty staną się dostępne w późniejszym terminie, muszą zostać ponownie zamówione.
 
-~~~
-
-<?xml version="1.0" encoding="utf-8"?>
-<message>
-  <kind>ORDER</kind>
-  <buyer_order_number>SK/18777/2017</buyer_order_number>
-  <buyer>558710</buyer>
-  <seller>112871</seller>
-  <delivery>558728</delivery>
-  <order_date>2017-11-19</order_date>
-  <line_items>
-    <line_item>
-      <quantity>2</quantity>
-      <ean>9788388722639</ean>
-      <description>Pamięć miłości</description>
-    </line_item>
-    <line_item>
-      <quantity>3</quantity>
-      <ean>9788388722684</ean>
-      <description>Dziedzictwo ziemi</description>
-    </line_item>
-  </line_items>
-</message>
-~~~
+<include filename="order.xml"/>
 
 kind:
   : w komunikacie zamówienia zawsze przyjmuje wartość **ORDER**, *pole wymagane*
@@ -195,38 +124,7 @@ Jest to odpowiedż na zamówienie (nie można odpowiadać jednocześnie na kilka
 które sprzedawca ma zamiar zrealizować (o części z góry wiadomo, że nie są dostępne). Jeśli sprzedawca odmawia realizacji zamówienia, to powinien wysłać komunikat tylko z nagłówkiem,
 bez żadnego produktu.
 
-~~~
-
-<?xml version="1.0" encoding="utf-8"?>
-<message>
-  <kind>ORDER_RESPONSE</kind>
-  <seller_order_number>11/2017</seller_order_number>
-  <buyer_order_number>SK/18777/2017</buyer_order_number>
-  <buyer>558710</buyer>
-  <seller>112871</seller>
-  <delivery>558728</delivery>
-  <line_items>
-    <line_item>
-      <quantity>1</quantity>
-      <ean>9788388722639</ean>
-      <net_price>19.93</net_price>
-      <net_amount>19.93</net_amount>
-      <tax_rate>5</tax_rate>
-      <tax_amount>1.00</tax_amount>
-      <description>Pamięć miłości</description>
-    </line_item>
-    <line_item>
-      <quantity>3</quantity>
-      <ean>9788388722684</ean>
-      <net_price>25.2</net_price>
-      <net_amount>75.6</net_amount>
-      <tax_rate>5</tax_rate>
-      <tax_amount>3.78</tax_amount>
-      <description>Dziedzictwo ziemi</description>
-    </line_item>
-  </line_items>
-</message>
-~~~
+<include filename="order_response.xml"/>
 
 Są tu powtórzone pola z komunikatu *ORDER*, z wyjątkiem:
 
@@ -263,30 +161,7 @@ line_items:
 
 Jest to informacja o wysyłce produktów.
 
-~~~
-
-<?xml version="1.0" encoding="utf-8"?>
-<message>
-  <kind>DESPATCH_ADVICE</kind>
-  <seller_order_number>11/2017</seller_order_number>
-  <buyer_order_number>SK/18777/2017</buyer_order_number>
-  <buyer>558710</buyer>
-  <seller>112871</seller>
-  <delivery>558728</delivery>
-  <line_items>
-    <line_item>
-      <quantity>3</quantity>
-      <ean>9788388722684</ean>
-      <net_price>25.2</net_price>
-      <net_amount>75.6</net_amount>
-      <tax_rate>5</tax_rate>
-      <tax_amount>3.78</tax_amount>
-      <description>Dziedzictwo ziemi</description>
-    </line_item>
-  </line_items>
-</message>
-
-~~~
+<include filename="despatch_advice.xml"/>
 
 Są tu powtórzone pola z komunikatu *ORDER_RESPONSE*, z wyjątkiem:
 
@@ -298,62 +173,7 @@ kind:
 
 Jest to faktura wystawiona za towar. Do jednego zamówienia może zostać wystawiona jedna faktura.
 
-~~~
-
-<?xml version="1.0" encoding="utf-8"?>
-<message>
-  <kind>INVOICE</kind>
-  <invoice_number>29991/S/2017</invoice_number>
-  <seller_order_number>11/2017</seller_order_number>
-  <buyer_order_number>SK/18777/2017</buyer_order_number>
-  <buyer>558710</buyer>
-  <seller>112871</seller>
-  <delivery>558728</delivery>
-  <invoice_date>2017-11-20</invoice_date>
-  <sales_date>2017-11-20</sales_date>
-  <payment_due_date>2017-12-03</payment_due_date>
-  <seller_name>Wydawnictwo Dobre książki z o. o.</seller_name>
-  <seller_address>ul Kolejowa 9/11</seller_address>
-  <seller_city>Warszawa</seller_city>
-  <seller_post_code>01-217</seller_post_code>
-  <seller_tax_id>9744287572</seller_tax_id>
-  <buyer_name>Księgarnia Superksiążki sp. z o. o.</buyer_name>
-  <buyer_address>Al. Niepodległości 1</buyer_address>
-  <buyer_city>Warszawa</buyer_city>
-  <buyer_post_code>02-653</buyer_post_code>
-  <buyer_tax_id>1270286596</buyer_tax_id>
-  <delivery_detail_name>Superksiążki - Magazyn</delivery_detail_name>
-  <delivery_detail_address>ul. Czarna 1</delivery_detail_address>
-  <delivery_detail_city>Warszawa</delivery_detail_city>
-  <delivery_detail_post_code>02-997</delivery_detail_post_code>
-  <pdf>--obraz faktury pdf zakodowany base64--</pdf>
-  <line_items>
-    <line_item>
-      <quantity>3</quantity>
-      <net_price>25.2</net_price>
-      <net_amount>75.6</net_amount>
-      <tax_rate>5</tax_rate>
-      <tax_amount>3.78</tax_amount>
-      <ean>9788388722684</ean>
-      <description>Dziedzictwo ziemi</description>
-    </line_item>
-  </line_items>
-  <summary>
-    <total_lines>1</total_lines>
-    <net_amount>75.6</net_amount>
-    <tax_amount>3.78</tax_amount>
-    <gross_amount>79.38</gross_amount>
-    <tax_rate_summaries>
-      <tax_rate_summary>
-        <tax_rate>5</tax_rate>
-        <net_amount>75.6</net_amount>
-        <tax_amount>3.78</tax_amount>
-        <gross_amount>79.38</gross_amount>
-      </tax_rate_summary>
-    </tax_rate_summaries>
-  </summary>
-</message>
-~~~
+<include filename="invoice.xml"/>
 
 kind:
   : typ wiadomości, zawsze **INVOICE**, *pole wymagane*

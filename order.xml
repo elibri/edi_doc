@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<message>
+  <kind>ORDER</kind>
+  <buyer_order_number>SK/18777/2017</buyer_order_number>
+  <buyer>558710</buyer>
+  <seller>112871</seller>
+  <delivery>558728</delivery>
+  <order_date>2017-11-19</order_date>
+  <line_items>
+    <line_item>
+      <quantity>2</quantity>
+      <ean>9788388722639</ean>
+      <description>Pamięć miłości</description>
+    </line_item>
+    <line_item>
+      <quantity>3</quantity>
+      <ean>9788388722684</ean>
+      <description>Dziedzictwo ziemi</description>
+    </line_item>
+  </line_items>
+</message>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<message>
+  <kind>STOCK_RESPONSE</kind>
+  <buyer>558710</buyer>
+  <seller>112871</seller>
+  <response_date>2017-11-19</response_date>
+  <line_items>
+    <line_item>
+      <ean>9788388722639</ean>
+      <description>Pamięć miłości</description>
+      <stock_quantity>12</stock_quantity>
+      <retail_price_including_tax>29.90</retail_price_including_tax>
+      <tax>5</tax>
+      <trading_prices>
+        <trade_price>
+          <trade_net_price>19.93</trade_net_price>
+          <minimal_amount>1</minimal_amount>
+        </trade_price>
+        <trade_price>
+          <trade_net_price>17.09</trade_net_price>
+          <minimal_amount>10</minimal_amount>
+        </trade_price>
+      </trading_prices>
+    </line_item>
+    <line_item>
+      <ean>9788388722684</ean>
+      <description>Dziedzictwo ziemi</description>
+      <stock_quantity>50</stock_quantity>
+      <expected_ship_date>2017-12-01</expected_ship_date>
+      <consumer_on_sale_date>2017-12-05</consumer_on_sale_date>
+      <retail_price_including_tax>39.90</retail_price_including_tax>
+      <tax>5</tax>
+      <trading_prices>
+        <trade_net_price>25.20</trade_net_price>
+      </trading_prices>
+    </line_item>
+  </line_items>
+</message>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<message>
+  <kind>ORDER_RESPONSE</kind>
+  <seller_order_number>11/2017</seller_order_number>
+  <buyer_order_number>SK/18777/2017</buyer_order_number>
+  <buyer>558710</buyer>
+  <seller>112871</seller>
+  <delivery>558728</delivery>
+  <line_items>
+    <line_item>
+      <quantity>1</quantity>
+      <ean>9788388722639</ean>
+      <net_price>19.93</net_price>
+      <net_amount>19.93</net_amount>
+      <tax_rate>5</tax_rate>
+      <tax_amount>1.00</tax_amount>
+      <description>Pamięć miłości</description>
+    </line_item>
+    <line_item>
+      <quantity>3</quantity>
+      <ean>9788388722684</ean>
+      <net_price>25.2</net_price>
+      <net_amount>75.6</net_amount>
+      <tax_rate>5</tax_rate>
+      <tax_amount>3.78</tax_amount>
+      <description>Dziedzictwo ziemi</description>
+    </line_item>
+  </line_items>
+</message>

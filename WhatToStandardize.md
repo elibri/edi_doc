@@ -31,25 +31,4 @@ INVOICE
 Najbardziej uniwersalnym sposobem wymiany komunikatów jest E-mail. Każda firma musi mieć dwa adresy E-mail: jeden, na który mają być wysyłane komunikaty, drugi, na który będą odsyłane
 informacje o błędach podczas przetwarzania komunikatów (ta skrzynka powinna być regularnie czytana przez wyznaczonego pracownika). 
 
-Komunikat powinien być wklejony jako tekst w treści maila. Dopuszczalne jest też umieszczenie stopki, po linii skłającej się z przynajmniej dwóch myślników.
-
-Przykład E-maila:
-
-~~~
-
-Date: Tue, 14 Nov 2017 16:25:42 +0000
-From: edi <edi@publisher.com>
-To: edi@company.com
-Message-ID: <0102015fbb59c144-d95a7bd1-3473-46c6-9af2-a8f7e2b55336-000000@elibri.com.pl>
-Subject: ORDER
-MIME-Version: 1.0
-Content-Type: text/plain; charset=UTF-8
-Content-Transfer-Encoding: 7bit
-
-<?xml version="1.0" encoding="UTF-8"?>
-<Message>...</Message>
-
---
-Tu znajduje się ignorowany przy przetwarzaniu komunikat
-~~~
-
+Komunikat musi być załącznikiem do wiadomości tekstowej, jego typ powinien wskazywać na to, że jest to xml.

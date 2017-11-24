@@ -24,7 +24,7 @@ Jest to odpowiedź na żądanie informacji o dostępnych do sprzedaży produktac
 <include filename="stock_response.xml"/>
 
 kind:
-  : w tym komunikacie zawsze przyjmuje wartość **STOCK_RESPONSE**, *pole wymagane*
+  : w tym komunikacie zawsze przyjmuje wartość **STOCK_RESPONSE**, *pole wymagane* <>
 
 buyer:
   : identyfikator strony zamawiającej, *pole wymagane*.
@@ -40,7 +40,7 @@ line_items:
     wygenerować pusty tag `<line_items/>`
 
     line_item: 
-      : linia zamówienia
+      : linia zamówienia 
 
         ean:
           : EAN produktu, *pole wymagane*
@@ -59,7 +59,7 @@ line_items:
         consumer_on_sale_date:
           : w tym polu można podać datę, od kiedy książka może być sprzedawana klientom końcowym, w formacie rrrr-mm-dd.
 
-        retail_price_including_tax:
+        gross_retail_price:
           : w tym polu można podać cenę detaliczną produktu z podatkiem VAT.
 
         tax:

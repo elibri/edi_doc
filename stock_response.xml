@@ -9,7 +9,7 @@
       <ean>9788388722639</ean>
       <description>Pamięć miłości</description>
       <stock_quantity>12</stock_quantity>
-      <retail_price_including_tax>29.90</retail_price_including_tax>
+      <gross_retail_price>29.90</gross_retail_price>
       <tax>5</tax>
       <trading_prices>
         <trade_price>
@@ -28,7 +28,7 @@
       <stock_quantity>50</stock_quantity>
       <expected_ship_date>2017-12-01</expected_ship_date>
       <consumer_on_sale_date>2017-12-05</consumer_on_sale_date>
-      <retail_price_including_tax>39.90</retail_price_including_tax>
+      <gross_retail_price>39.90</gross_retail_price>
       <tax>5</tax>
       <trading_prices>
         <trade_net_price>25.20</trade_net_price>

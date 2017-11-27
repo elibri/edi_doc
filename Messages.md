@@ -24,7 +24,7 @@ Jest to odpowiedź na żądanie informacji o dostępnych do sprzedaży produktac
 <include filename="stock_response.xml"/>
 
 kind:
-  : w tym komunikacie zawsze przyjmuje wartość **STOCK_RESPONSE**, *pole wymagane* <>
+  : w tym komunikacie zawsze przyjmuje wartość **STOCK_RESPONSE**, *pole wymagane*
 
 buyer:
   : identyfikator strony zamawiającej, *pole wymagane*.

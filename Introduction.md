@@ -5,7 +5,7 @@
 Jest kilka powodów, dla których proponujemy nowy stadard branżowy.  
 
 Po pierwsze - proponujemy format maksymalnie uproszczony. 
-Większość zamówień realizowanych jest jednorazowo, wysyłane są tylko dostępne produkty, niedostępne są ignorowane.
+Większość zamówień realizowanych jest jednorazowo. Oznacza to, że dostawca realizuje dostępne pozycje, a resztę odrzuca.
 Jeśli niedostępny produkt staje się dostępny w późniejszym terminie, zamawiający musi złożyć nowe zamówienie, które znowu, realizowane jest jednorazowo. 
 
 #### Prosty format = niższe koszty programowania/testowania/wdrażania
